@@ -1,0 +1,88 @@
+$entero: 600px;
+$medio: 600px / 2;
+
+@mixin tamaño ($alto, $ancho) {
+    height: $alto;
+    width: $ancho;
+}
+
+.galeriaFotos{
+    display: grid;
+    grid-template-columns: $entero $medio $medio;
+    grid-template-rows: $medio $medio $medio;
+    grid-template-areas: "area1 area2 area3"
+                         "area1 area5 area6"
+                         "area1 area8 area9";
+    column-gap: 15px;
+    row-gap: 15px;  
+    justify-items: center;
+    align-items: center;
+    justify-content: center;  
+    align-content: center;                 
+}
+    
+.foto-1{
+    grid-area: area1;
+    @include tamaño(95%, 95%);
+}
+    
+.foto-2{
+    grid-area: area2;
+    @include tamaño(95%, 95%);
+}
+    
+.foto-3{
+    grid-area: area3;
+    @include tamaño(95%, 95%);
+}
+    
+.foto-4{
+    grid-area: area5;
+    @include tamaño(95%, 95%);
+}
+    
+.foto-5{
+    grid-area: area6;
+    @include tamaño(95%, 95%);
+}
+    
+.foto-6{
+    grid-area: area8;
+    @include tamaño(95%, 95%);
+}
+    
+.foto-7{
+    grid-area: area9;
+    @include tamaño(95%, 95%);
+}
+    
+.fotosGaleria{
+    display: grid;
+    grid-template-columns: 300px 300px 300px 300px;
+    grid-template-rows: 300px;
+    column-gap: 15px;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;  
+    align-content: center; 
+}
+    
+.foto1{
+    @include tamaño(100%, 100%);
+}
+    
+.foto2{
+    @include tamaño(100%, 100%);
+}
+    
+.foto3{
+    @include tamaño(100%, 100%);
+}
+    
+.foto4{
+    @include tamaño(100%, 100%);
+}
+
+main {
+    background-image: linear-gradient(to left, rgb(71, 206, 240), rgb(86, 86, 233));
+}
