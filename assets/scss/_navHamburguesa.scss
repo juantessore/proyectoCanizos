@@ -1,0 +1,110 @@
+.menuB {
+    background-image: $fondoNavFooter;
+
+    #boton:checked ~ .menuD {
+        display: block;
+    }
+
+    #boton:checked ~ nav > ul {
+        display: flex;
+    }
+
+    #boton {
+        display: none;
+    }
+    
+    &__boton {
+        display: block;
+        :hover {
+            cursor: pointer;
+        }
+    }
+
+    &__img {
+        margin: 3px;
+        padding: 3px;
+        border-radius: $bordesBotones;
+        transition: $tiempoAnimacion;
+        @include dimensiones (25px, 25px);
+    }
+
+    &__img:hover {
+        box-shadow: $colorBordesBotones;
+        background-color: $sombreado;
+    }
+}
+
+.menuD {
+    display: none;
+
+    ul {
+        list-style: none;
+    }
+
+    li {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        position: relative;
+        margin-left: 1px;
+        margin-right: 1px;
+        padding: $paddingBotones;
+        transition: $tiempoAnimacion;
+        border-radius: $bordesBotones;
+    }
+
+    li:hover {
+        justify-content: center;
+        background-color: $sombreado;
+        box-shadow: $colorBordesBotones;
+    }
+
+    a {
+        text-decoration: none;
+        display: block;
+        color: rgb(255, 255, 255);
+    }
+
+    &__container_1 {
+        display: flex;
+        flex-direction: column;
+        width: 45%;
+    }
+
+    &__list_1 {
+        flex-direction: column;
+    }
+
+    &__list_1:hover > ul {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .menuB {
+        &__img {
+            display: none;
+        }
+    }
+
+    .menuD {
+        display: block;
+
+        &__container_1 {
+            flex-direction: row;
+            justify-content: space-around;
+            width: 100%;
+        }
+
+        &__list_1 {
+            width: 100%;
+            justify-content: center;
+        }
+
+        li:hover {
+            justify-content: center;
+            background-color: $sombreado;
+        }
+    }
+}

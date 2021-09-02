@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/*nav y footer*/
+
+$fondoNavFooter: linear-gradient( 45deg, rgb(0, 200, 255), rgb(50, 100, 255));
+
+@mixin bordesTop ($left, $right) {
+    border-top-left-radius: $left;
+    border-top-right-radius: $right;
+}
+
+@mixin bordesBottom ($left, $right) {
+    border-bottom-left-radius: $left;
+    border-bottom-right-radius: $right;
+}
+
+/*animaciones y hover*/
+
+$tiempoAnimacion: 0.4s;
+
+$colorHiperVinculo: rgb(0, 255, 255);
+
+$sombreado: rgba(0, 255, 255, 0.3);
+
+$bordesSombreado: 5px;
+
+/*imagenes*/
+
+$bordesImagenes: 5px;
+
+$colorBordesImagenes: 1px solid rgb(0, 255, 255);
+
+/*botones*/
+
+$bordesBotones: 3px;
+
+$paddingBotones: 10px 15px;
+
+$paddingBotonesChicos: 5px 10px;
+
+$colorBordesBotones:  inset 0 0 0 1px rgb(100, 255, 255);
+
+/*titulos*/
+
+$tituloChico: calc(0.9em + 1vw);
+
+$tituloMediano: calc(1.2em + 1vw);
+
+$tituloGrande: calc(1.4em + 1vw);
+
+$colorTitulos: rgb(255, 255, 255);
+
+@mixin marginTitle ($top, $bottom) {
+    margin-top: $top;
+    margin-bottom: $bottom;
+}
+
+/*sub titulos*/
+
+$subTituloChico: calc(0.6em + 1vw);
+
+$subTituloMediano: calc(0.7em + 1vw);
+
+$subTituloGrande: calc(0.9em + 1vw);
+
+/*parrafos*/
+
+$parrafoChico: calc(0.5em + 1vw);
+
+$parrafoMediano: calc(0.6em + 1vw);
+
+$parrafoGrande: calc(0.3em + 0.9vw);
+
+$colorParrafo: rgb(255, 255, 255);
+
+/*formularios*/
+
+$bordesForm: 5px;
+
+$colorForm: rgb(150, 255, 255);
+
+@mixin form ($margin, $paddingL, $borderS) {
+    margin: $margin;
+    padding-left: $paddingL;
+    border-style: $borderS;
+}
+
+@mixin dimensionForm ($width, $line-height) {
+    width: $width;
+    line-height: $line-height;
+}
+
+/*table*/
+
+$colorBordesTable: solid 1px rgb(255, 255, 255);
+
+/*general*/
+
+@mixin subContent ($display, $row, $align) {
+    display: $display;
+    grid-template-rows: $row;
+    align-items: $align;
+}
+
+@mixin ubicacion ($top, $left, $width) {
+    top: $top;
+    left: $left;
+    width: $width;
+}
+
+@mixin dimensiones ($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+/*body*/
+
+$fondoGeneral: rgb(35, 35, 40);
+
+body {
+    background-color: $fondoGeneral;
+}
