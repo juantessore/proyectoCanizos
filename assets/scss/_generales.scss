@@ -1,50 +1,37 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
 }
 
-/*nav y footer*/
-
-$fondoNavFooter: linear-gradient( 45deg, rgb(0, 200, 255), rgb(50, 100, 255));
-
-@mixin bordesTop ($left, $right) {
-    border-top-left-radius: $left;
-    border-top-right-radius: $right;
+@font-face {
+    font-family: "cinzeldecorative";
+    src: url(../../googlefont/CinzelDecorative-Regular.ttf);
 }
 
-@mixin bordesBottom ($left, $right) {
-    border-bottom-left-radius: $left;
-    border-bottom-right-radius: $right;
+@font-face {
+    font-family: "cormorantInfant";
+    src: url(../../googlefont/CormorantInfant-Regular.ttf);
 }
 
-/*animaciones y hover*/
+$fondoIndex: rgb(230, 220, 220);
+
+$colorFondoSections: rgb(100,100,100);
+
+$fondoNavFooter: linear-gradient( 90deg,rgb(15, 105, 10), rgb(15, 175, 35));
 
 $tiempoAnimacion: 0.4s;
 
-$colorHiperVinculo: rgb(0, 255, 255);
+$colorBordesBotones:  inset 0 0 0 1px rgb(240, 175, 50);
 
-$sombreado: rgba(0, 255, 255, 0.3);
+$colorHiperVinculo: rgb(240, 175, 50);
+
+$sombreado: rgba(0, 255, 0, 0.4);
 
 $bordesSombreado: 5px;
-
-/*imagenes*/
 
 $bordesImagenes: 5px;
 
 $colorBordesImagenes: 1px solid rgb(0, 255, 255);
-
-/*botones*/
-
-$bordesBotones: 3px;
-
-$paddingBotones: 10px 15px;
-
-$paddingBotonesChicos: 5px 10px;
-
-$colorBordesBotones:  inset 0 0 0 1px rgb(100, 255, 255);
-
-/*titulos*/
 
 $tituloChico: calc(0.9em + 1vw);
 
@@ -52,22 +39,13 @@ $tituloMediano: calc(1.2em + 1vw);
 
 $tituloGrande: calc(1.4em + 1vw);
 
-$colorTitulos: rgb(255, 255, 255);
-
-@mixin marginTitle ($top, $bottom) {
-    margin-top: $top;
-    margin-bottom: $bottom;
-}
-
-/*sub titulos*/
+$colorTitulos: rgb(240, 175, 50);
 
 $subTituloChico: calc(0.6em + 1vw);
 
 $subTituloMediano: calc(0.7em + 1vw);
 
 $subTituloGrande: calc(0.9em + 1vw);
-
-/*parrafos*/
 
 $parrafoChico: calc(0.5em + 1vw);
 
@@ -77,11 +55,32 @@ $parrafoGrande: calc(0.3em + 0.9vw);
 
 $colorParrafo: rgb(255, 255, 255);
 
-/*formularios*/
+$linkChico: calc(0.6em + 1vw);
+
+$linkMediano: calc(0.7em + 1vw);
+
+$linkGrande: calc(0.9em + 1vw);
 
 $bordesForm: 5px;
 
-$colorForm: rgb(150, 255, 255);
+$colorForm: rgb(233, 186, 99);
+
+$bordesBotones: 3px;
+
+$paddingBotones: 10px 15px;
+
+$paddingBotonesChicos: 5px 10px;
+
+@mixin grid ($display, $column, $rows) {
+    display: $display;
+    grid-template-columns: $column;
+    grid-template-rows: $rows;
+}
+
+@mixin marginTitle ($top, $bottom) {
+    margin-top: $top;
+    margin-bottom: $bottom;
+}
 
 @mixin form ($margin, $paddingL, $borderS) {
     margin: $margin;
@@ -92,18 +91,6 @@ $colorForm: rgb(150, 255, 255);
 @mixin dimensionForm ($width, $line-height) {
     width: $width;
     line-height: $line-height;
-}
-
-/*table*/
-
-$colorBordesTable: solid 1px rgb(255, 255, 255);
-
-/*general*/
-
-@mixin subContent ($display, $row, $align) {
-    display: $display;
-    grid-template-rows: $row;
-    align-items: $align;
 }
 
 @mixin ubicacion ($top, $left, $width) {
@@ -117,10 +104,17 @@ $colorBordesTable: solid 1px rgb(255, 255, 255);
     height: $height;
 }
 
-/*body*/
+@mixin subContent ($display, $justify, $align, $margin) {
+    display: $display;
+    justify-items: $justify;
+    align-items: $align;
+    margin: $margin;
+}
 
-$fondoGeneral: rgb(35, 35, 40);
+h1, h2, h3, h4, h5, h6{
+    font-family: "cinzeldecorative";
+}
 
-body {
-    background-color: $fondoGeneral;
+a, p {
+   font-family: "cormorantInfant";
 }
