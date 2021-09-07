@@ -1,88 +1,135 @@
-$entero: 600px;
-$medio: 600px / 2;
-
-@mixin tamaño ($alto, $ancho) {
-    height: $alto;
-    width: $ancho;
-}
-
-.galeriaFotos{
-    display: grid;
-    grid-template-columns: $entero $medio $medio;
-    grid-template-rows: $medio $medio $medio;
-    grid-template-areas: "area1 area2 area3"
-                         "area1 area5 area6"
-                         "area1 area8 area9";
-    column-gap: 15px;
-    row-gap: 15px;  
-    justify-items: center;
+.galeria {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;  
-    align-content: center;                 
-}
-    
-.foto-1{
-    grid-area: area1;
-    @include tamaño(95%, 95%);
-}
-    
-.foto-2{
-    grid-area: area2;
-    @include tamaño(95%, 95%);
-}
-    
-.foto-3{
-    grid-area: area3;
-    @include tamaño(95%, 95%);
-}
-    
-.foto-4{
-    grid-area: area5;
-    @include tamaño(95%, 95%);
-}
-    
-.foto-5{
-    grid-area: area6;
-    @include tamaño(95%, 95%);
-}
-    
-.foto-6{
-    grid-area: area8;
-    @include tamaño(95%, 95%);
-}
-    
-.foto-7{
-    grid-area: area9;
-    @include tamaño(95%, 95%);
-}
-    
-.fotosGaleria{
-    display: grid;
-    grid-template-columns: 300px 300px 300px 300px;
-    grid-template-rows: 300px;
-    column-gap: 15px;
-    justify-items: center;
-    align-items: center;
-    justify-content: center;  
-    align-content: center; 
-}
-    
-.foto1{
-    @include tamaño(100%, 100%);
-}
-    
-.foto2{
-    @include tamaño(100%, 100%);
-}
-    
-.foto3{
-    @include tamaño(100%, 100%);
-}
-    
-.foto4{
-    @include tamaño(100%, 100%);
+    padding-top: 2%;
+    background-color: $colorFondoSections;
+
+    &__title {
+        border-top: solid 1px $colorTitulos;
+        border-bottom: solid 1px $colorTitulos;
+        width: fit-content;
+        margin-top: 2%;
+        margin-bottom: 2%;color: $colorTitulos;
+    }
+
+    &__container {
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "img"
+        "subContent_1"
+        "subContent_2"
+        "subContent_3";
+        @include subContent(grid, center, center, 0.25%)
+    }
+
+    &__img {
+        grid-area: img;
+        height: 98.5%;
+        border-radius: $bordesImagenes;
+    }
+
+    &__img_2 {
+        height: 97%;
+        border-radius: $bordesImagenes;
+    }
+
+    img {
+        border: solid 2px $colorFondoSections;
+        transition: $tiempoAnimacion;
+    }
+
+    img:hover {
+        border: solid 2px $colorTitulos;
+    }
+
+    &__subContent_1 {
+        grid-area: subContent_1;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
+        @include subContent(grid, center, center, 0.25%)
+    }
+
+    &__subContent_2 {
+        grid-area: subContent_2;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
+        @include subContent(grid, center, center, 0.25%)
+    }
+
+    &__subContent_3 {
+        grid-area: subContent_3;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
+        @include subContent(grid, center, center, 0.25%)
+    }
 }
 
-main {
-    background-image: linear-gradient(to left, rgb(71, 206, 240), rgb(86, 86, 233));
+@media only screen and (max-width: 479px) {
+    .galeria {
+        &__title {
+            font-size: $tituloChico;
+        }
+
+        &__img {
+            width: 90%;
+        }
+    
+        &__img_2 {
+            width: 90%;
+        }
+
+        &__subContent_1 {
+            grid-template-columns: 100%;
+        }
+    
+        &__subContent_2 {
+            grid-template-columns: 100%;
+        }
+    
+        &__subContent_3 {
+            grid-template-columns: 100%;
+        }
+    }
+}
+
+@media only screen and (min-width: 480px) {
+    .galeria {
+        &__title {
+            font-size: $tituloMediano;
+        }
+
+        &__img {
+            width: 95%;
+        }
+    
+        &__img_2 {
+            width: 95%;
+        }
+    }
+}
+
+@media only screen and (min-width: 780px) {
+    .galeria {
+        &__title {
+            font-size: $tituloGrande;
+        }
+
+        &__container {
+            grid-template-columns: 50% 50%;
+            grid-template-areas:
+            "img subContent_1"
+            "img subContent_2"
+            "img subContent_3";
+        }
+    
+        &__img {
+            width: 97%;
+        }
+    
+        &__img_2 {
+            width: 96%;
+        }
+    }
 }

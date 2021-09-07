@@ -1,13 +1,74 @@
-.main{
-    background-image: radial-gradient(rgb(227, 234, 253), rgb(28, 238, 245));
-    width: 100%;
-    height: auto;
-    &__parrafoPrincipal{
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        font-size: 2rem;
+.mainHome{
+    background-color: $fondoIndex;
+
+    &__container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__title{
+        color: $colorTitulos;
+        margin-top: 2%;
+        padding: 2%;
+        font-size: $subTituloGrande;
+        border-top: solid 1px $colorTitulos;
+        border-bottom: solid 1px $colorTitulos;
+    }
+    &__parrafo{
+        font-size: $parrafoMediano;
         color: black;
-        text-shadow: 2px 2px rgb(97, 240, 233);
-        padding: 10%;
+        padding: 3%;
+        text-align: center;
+    }
+    &__link{
+        color: $colorTitulos;
+        text-decoration: none;
+        text-align: center;
+        padding: 0.5%;
+        width: 15%;
+        border: solid 1px $colorTitulos;
+        transition: $tiempoAnimacion;
+    }
+    &__link:hover{
+        background-color: $colorTitulos;
+        color: whitesmoke;
+    }
+}
+
+.slider {
+    width: 60%;
+    overflow: hidden;
+    margin: 2.5%;
+
+    li {
+        list-style: none;
+        width: 100%;
+    }
+
+    &__container {
+        padding: 0;
+        display: flex;
+        width: 500%;
+        animation: slider 30s infinite alternate linear;
+    }
+
+    &__img {
+        width: 100%;
+        border-radius: $bordesImagenes;
+    }
+
+    @keyframes slider {
+        0% {margin-left: 0%;}
+        18% {margin-left: 0%;}
+        22% {margin-left: -100%;}
+        38% {margin-left: -100%;}
+        42% {margin-left: -200%;}
+        58% {margin-left: -200%;}
+        62% {margin-left: -300%;}
+        78% {margin-left: -300%;}
+        82% {margin-left: -400%;}
+        100% {margin-left: -400%;}
     }
 }
 

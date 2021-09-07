@@ -1,56 +1,94 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="description" content="cañas aplicadas a cielo razos y cerramientos y/o medianeras">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>galeria</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link rel="stylesheet" href="../assets/css/style.css">
   <title>galeria-fotos-cañas</title>
 </head>
 
 <body>
   <header class="header">
-    <img class="header__logo" src="../img/home/logocompañia.jpg" alt="logo" height="150px" width="120px">
+    <h1 class="header__title"><a href="../index.html" class="header__link">CAÑIZOS <span
+          class="header__color">CORDOBA</span></a></h1>
+    <nav class="menuB">
+      <input type="checkbox" id="boton">
+      <label for="boton" class="menuB__boton"><img src="../img/ico/icono_menu.svg" alt="Menu Nav"
+          class="menuB__img"></label>
+      <div class="menuD">
+        <ul class="menuD__container_1">
+          <li class="menuD__list_1"><a href="../index.html" class="menuD__link">Home</a></li>
+          <li class="menuD__list_1"><a href="productos.html" class="menuD__link">Productos</a></li>
+          <li class="menuD__list_1"><a href="sobrenosotros.html" class="menuD__link">Nosotros</a></li>
+          <li class="menuD__list_1"><a href="#" class="menuD__link">Galeria</a></li>
+          <li class="menuD__list_1"><a href="contacto.html" class="menuD__link">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
   </header>
-  <nav class="navegador">
-    <ul class="navegador__lista">
-      <li class="navegador__item"><a href="../index.html" class="navegador__link">INICIO</a></li>
-      <li class="navegador__item"><a href="productos.html" class="navegador__link">PRODUCTOS</a>
-      <li class="navegador__item"><a href="#" class="navegador__link">GALERIA</a></li>
-      <li class="navegador__item"><a href="sobrenosotros.html" class="navegador__link">SOBRE NOSOTROS</a></li>
-      <li class="navegador__item"><a href="contacto.html" class="navegador__link">CONTACTO</a></li>
-    </ul>
-  </nav>
-  <main class="fondoMain">
-    <h2 class="animate__animated animate__fadeInRightBig">Techos/Mediasombras</h2>
-    <section class="galeriaFotos">
-      <img src="../img/galeria/techos/techocañas.jpg" alt="foto techos" class="foto-1">
-      <img src="../img/galeria/techos/techocañas2.jpg" alt="foto techos 2" class="foto-2">
-      <img src="../img/galeria/techos/techocañas3.jpg" alt="foto techos 3" class="foto-3">
-      <img src="../img/galeria/techos/techocañas4.jpg" alt="foto techos 4" class="foto-4">
-      <img src="../img/galeria/techos/techocañas5.jpg" alt="foto techos 5" class="foto-5">
-      <img src="../img/galeria/techos/techocañas6.jpg" alt="foto techos 6" class="foto-6">
-      <img src="../img/galeria/techos/techocañas7.jpg" alt="foto techos 7" class="foto-7">
-    </section>
-    <h2 class="animate__animated animate__fadeInRightBig">Cerramientos</h2>
-    <section class="fotosGaleria"> 
-      <img src="../img/galeria/medianeras/medianera1.jpg" alt="foto dedianera 1" class="foto1">
-      <img src="../img/galeria/medianeras/medianera2.jpg" alt="foto medianera 2" class="foto2">
-      <img Src="../img/galeria/medianeras/medianera3.jpg" alt="foto medianera 3" class="foto3">
-      <img src="../img/galeria/medianeras/medianera4.jpg" alt="foto medianera 4" class="foto4">
-    </section>
+  <main class="galeria">
+    <h1 class="galeria__title">TECHOS</h1>
+    <div class="galeria__container">
+      <img src="../img/galeria/techos/techocañas.jpg" alt="imagen galeria" class="galeria__img">
+      <div class="galeria__subContent_1">
+        <img src="../img/galeria/techos/techocañas2.jpg" alt="imagen galeria" class="galeria__img_2">
+        <img src="../img/galeria/techos/techocañas3.jpg" alt="imagen galeria" class="galeria__img_2">
+      </div>
+      <div class="galeria__subContent_2">
+        <img src="../img/galeria/techos/techocañas4.jpg" alt="imagen galeria" class="galeria__img_2">
+        <img src="../img/galeria/techos/techocañas5.jpg" alt="imagen galeria" class="galeria__img_2">
+      </div>
+      <div class="galeria__subContent_3">
+        <img src="../img/galeria/techos/techocañas6.jpg" alt="imagen galeria" class="galeria__img_2">
+        <img src="../img/galeria/techos/techocañas7.jpg" alt="imagen galeria" class="galeria__img_2">
+      </div>
+    </div>
+    <h1 class="galeria__title">MEDIANERAS</h1>
+    <div class="galeria__container">
+      <img src="../img/galeria/medianeras/medianera5.jpg" alt="imagen galeria" class="galeria__img">
+      <div class="galeria__subContent_1">
+        <img src="../img/galeria/medianeras/medianera4.jpg" alt="imagen galeria" class="galeria__img_2">
+        <img src="../img/galeria/medianeras/medianera3.jpg" alt="imagen galeria" class="galeria__img_2">
+      </div>
+      <div class="galeria__subContent_2">
+        <img src="../img/galeria/medianeras/medianera2.jpg" alt="imagen galeria" class="galeria__img_2">
+        <img src="../img/galeria/medianeras/medianera1.jpg" alt="imagen galeria" class="galeria__img_2">
+      </div>
+    </div>
   </main>
   <footer class="footer">
-    <ul class="footer__lista">
-      <li class="footer__item"><a class="footer__link" href="https://www.facebook.com">facebook</a></li>
-      <li class="footer__item"><a class="footer__link" href="https://www.instagram.com">instagram</a></li>
-      <li class="footer__item"><a class="footer__link" href="https://www.youtube.com">youtube</a></li>
+    <ul class="footer__container_1">
+      <li class="footer__item_1"><a class="footer__link" href="../index.html">Inicio</a></li>
+      <li class="footer__item_1"><a class="footer__link" href="contacto.html">Contacto</a><img
+          src="../img/ico/icono-subMenu.svg" alt="Menu Contacto" class="footer__icoImg">
+        <ul class="footer__container_2">
+          <li class="footer__item_2"><a class="footer__link" href="mailto:#"><img src="../img/ico/icons8-mail.svg"
+                alt="mail" class="footer__img"></a></li>
+          <li class="footer__item_2"><a class="footer__link" href="https://www.facebook.com"><img
+                src="../img/ico/icons8-facebook.svg" alt="facebook" class="footer__img"></a></li>
+          <li class="footer__item_2"><a class="footer__link" href="https://www.twitter.com"><img
+                src="../img/ico/icons8-twitter.svg" alt="twitter" class="footer__img"></a></li>
+          <li class="footer__item_2"><a class="footer__link" href="https://www.instagram.com"><img
+                src="../img/ico/icons8-instagram.svg" alt="instagram" class="footer__img"></a></li>
+          <li class="footer__item_2"><a class="footer__link" href="https://www.youtube.com"><img
+                src="../img/ico/icons8-youtube-play.svg" alt="youtube" class="footer__img"></a></li>
+          <li class="footer__item_2"><a class="footer__link" href="https://www.youtube.com"><img
+                src="../img/ico/icons8-whatsapp.svg" alt="youtube" class="footer__img"></a></li>
+        </ul>
+      </li>
+      <li class="footer__item_1"><a class="footer__link" href="404.html">Legales</a><img
+          src="../img/ico/icono-subMenu.svg" alt="Menu Legales" class="footer__icoImg">
+        <ul class="footer__container_2">
+          <li class="footer__item_2"><a class="footer__link" href="avisoLegal.html">Aviso legal</a></li>
+          <li class="footer__item_2"><a class="footer__link" href="politicasDePrivacidad.html">Privacidad</a></li>
+        </ul>
+      </li>
+      <li>&copy; 2021 Todos los derechos reservados.</li>
     </ul>
-    <p class="footer__parrafoCopy">&copy todos los derechos reservados.</p>
-    <p class="footer__parrafoPowered">powered by bellido</p> 
   </footer>
 </body>
+
 </html>

@@ -1,67 +1,89 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="description" content="Cañizos cordoba, canal de comunicacion para todas las consultas">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>contacto</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link rel="stylesheet" href="../assets/css/style.css">
   <title>contacto-cañizos cordoba</title>
 </head>
 
 <body>
   <header class="header">
-    <img class="header__logo" src="../img/home/logocompañia.jpg" alt="logo" height="150px" width="120px">
-  </header>
-    <nav class="navegador">
-      <ul class="navegador__lista">
-        <li class="navegador__item"><a href="../index.html" class="navegador__link">INICIO</a></li>
-        <li class="navegador__item"><a href="productos.html" class="navegador__link">PRODUCTOS</a>
-        <li class="navegador__item"><a href="galeria.html" class="navegador__link">GALERIA</a></li>
-        <li class="navegador__item"><a href="sobrenosotros.html" class="navegador__link">SOBRE NOSOTROS</a></li>
-        <li class="navegador__item"><a href="#" class="navegador__link">CONTACTO</a></li>
-      </ul>
+    <h1 class="header__title"><a href="../index.html" class="header__link">CAÑIZOS <span
+          class="header__color">CORDOBA</span></a></h1>
+    <nav class="menuB">
+      <input type="checkbox" id="boton">
+      <label for="boton" class="menuB__boton"><img src="../img/ico/icono_menu.svg" alt="Menu Nav"
+          class="menuB__img"></label>
+      <div class="menuD">
+        <ul class="menuD__container_1">
+          <li class="menuD__list_1"><a href="../index.html" class="menuD__link">Home</a></li>
+          <li class="menuD__list_1"><a href="productos.html" class="menuD__link">Productos</a></li>
+          <li class="menuD__list_1"><a href="sobrenosotros.html" class="menuD__link">Nosotros</a></li>
+          <li class="menuD__list_1"><a href="galeria.html" class="menuD__link">Galeria</a></li>
+          <li class="menuD__list_1"><a href="#" class="menuD__link">Contacto</a></li>
+        </ul>
+      </div>
     </nav>
-  <main class="fondoMain">
-    <div class="parrafoSobreNosotros">
-    <form action="#" method="post" class="formulario">
-      <label for="fname y lname"></label>
-      <input type="text" id="fname y lname" name="fname y lname"placeholder="nombre y apellido">
-      <label for="tel"></label>
-      <input type="tel" id="tel" name="tel"placeholder="num. telefono">
-      <label for="email"></label>
-      <input type="email" id="email" name="email" placeholder="e-mail">
-      <label for="masculino">Masculino</label>
-      <input type="radio" id="masculino" name="genero" value="masculino">
-      <label for="femenino">Femenino</label>
-      <input type="radio" id="femenino" name="genero" value="femenino">
-      <label for="otro">Otro</label>
-      <input type="radio" id="otro" name="genero" value="otro">
-      <textarea name="comentario" id="comentario" cols="30" rows="10" placeholder="mensaje"></textarea>
-      <label for="condiciones">acepto los terminos de privacidad</label>
-      <input type="checkbox" name="condiciones" id="condiciones">
-      <input type="reset" value="Resetear">
-      <input type="submit" value="Enviar">
-      <label for="lang">seleccionar idioma:</label>
-      <select name="lang" id="lang">
-      <option value="español">español</option>
-      <option value="ingles">ingles</option>
-      <option value="portugues">portugues</option>
-      <option value="frances">frances</option>
-      </select>
-    </form>
+  </header>
+  <section class="sectionContacto">
+    <div class="sectionContacto__container">
+      <img src="../img/slider/slider1.jpg" alt="Imagen Contacto" class="sectionContacto__img">
+      <form class="sectionContacto__form" action="url/ruta" method="post" autocomplete="off">
+        <h1 class="sectionContacto__title">CONTACTO</h1>
+        <p class="sectionContacto__parrafo">Ante cualquier consulta pudes contactarnos a traves de nuestros medios.<br>
+          Visita nuestras redes sociales.</p>
+        <input type="text" name="nombre" placeholder="Nombre" class="sectionContacto__datos" required>
+        <label for="nombre"></label>
+        <input type="text" name="apellido" placeholder="Apellido" class="sectionContacto__datos" required>
+        <label for="apellido"></label>
+        <input type="email" name="email" autocomplete="on" placeholder="E-mail" class="sectionContacto__datos" required>
+        <label for="email"></label>
+        <input type="text" name="asunto" autocomplete="off" placeholder="Asunto" class="sectionContacto__datos"
+          required>
+        <label for="asunto"></label>
+        <textarea name="mensaje" cols="70" rows="8" placeholder="Mensaje" class="sectionContacto__texto"></textarea>
+        <span class="sectionContacto__legales"><input type="checkbox" required> Acepto las <a
+            href="politicasDePrivacidad.html" class="sectionContacto__link"><b>Politicas de privacidad</b></a></span>
+        <div class="sectionContacto__containerBotones">
+          <input type="submit" value="Enviar" class="sectionContacto__boton">
+          <input type="reset" value="Cancelar" class="sectionContacto__boton">
+        </div>
+      </form>
     </div>
-  </main>
+  </section>
   <footer class="footer">
-    <ul class="footer__lista">
-      <li class="footer__item"><a class="footer__link" href="https://www.facebook.com">facebook</a></li>
-      <li class="footer__item"><a class="footer__link" href="https://www.instagram.com">instagram</a></li>
-      <li class="footer__item"><a class="footer__link" href="https://www.youtube.com">youtube</a></li>
+    <ul class="footer__container_1">
+      <li class="footer__item_1"><a class="footer__link" href="../index.html">Inicio</a></li>
+      <li class="footer__item_1"><a class="footer__link" href="#">Contacto</a><img src="../img/ico/icono-subMenu.svg"
+          alt="Menu Contacto" class="footer__icoImg">
+        <ul class="footer__container_2">
+          <li class="footer__item_2"><a class="footer__link" href="mailto:#"><img src="../img/ico/icons8-mail.svg"
+                alt="mail" class="footer__img"></a></li>
+          <li class="footer__item_2"><a class="footer__link" href="https://www.facebook.com"><img
+                src="../img/ico/icons8-facebook.svg" alt="facebook" class="footer__img"></a></li>
+          <li class="footer__item_2"><a class="footer__link" href="https://www.twitter.com"><img
+                src="../img/ico/icons8-twitter.svg" alt="twitter" class="footer__img"></a></li>
+          <li class="footer__item_2"><a class="footer__link" href="https://www.instagram.com"><img
+                src="../img/ico/icons8-instagram.svg" alt="instagram" class="footer__img"></a></li>
+          <li class="footer__item_2"><a class="footer__link" href="https://www.youtube.com"><img
+                src="../img/ico/icons8-youtube-play.svg" alt="youtube" class="footer__img"></a></li>
+          <li class="footer__item_2"><a class="footer__link" href="https://www.youtube.com"><img
+                src="../img/ico/icons8-whatsapp.svg" alt="youtube" class="footer__img"></a></li>
+        </ul>
+      </li>
+      <li class="footer__item_1"><a class="footer__link" href="404.html">Legales</a><img
+          src="../img/ico/icono-subMenu.svg" alt="Menu Legales" class="footer__icoImg">
+        <ul class="footer__container_2">
+          <li class="footer__item_2"><a class="footer__link" href="avisoLegal.html">Aviso legal</a></li>
+          <li class="footer__item_2"><a class="footer__link" href="politicasDePrivacidad.html">Privacidad</a></li>
+        </ul>
+      </li>
+      <li>&copy; 2021 Todos los derechos reservados.</li>
     </ul>
-    <p class="footer__parrafoCopy">&copy todos los derechos reservados.</p>
-    <p class="footer__parrafoPowered">powered by bellido</p> 
   </footer>
 </body>
 

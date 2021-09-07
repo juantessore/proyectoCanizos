@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "cinzeldecorative";
+    src: url(../../googlefont/CinzelDecorative-Regular.ttf);
+}
+
+@font-face {
+    font-family: "cormorantInfant";
+    src: url(../../googlefont/CormorantInfant-Regular.ttf);
+}
+
+$fondoIndex: rgb(230, 220, 220);
+
+$colorFondoSections: rgb(100,100,100);
+
+$fondoNavFooter: linear-gradient( 90deg,rgb(15, 105, 10), rgb(15, 175, 35));
+
+$tiempoAnimacion: 0.4s;
+
+$colorBordesBotones:  inset 0 0 0 1px rgb(240, 175, 50);
+
+$colorHiperVinculo: rgb(240, 175, 50);
+
+$sombreado: rgba(0, 255, 0, 0.4);
+
+$bordesSombreado: 5px;
+
+$bordesImagenes: 5px;
+
+$colorBordesImagenes: 1px solid rgb(0, 255, 255);
+
+$tituloChico: calc(0.9em + 1vw);
+
+$tituloMediano: calc(1.2em + 1vw);
+
+$tituloGrande: calc(1.4em + 1vw);
+
+$colorTitulos: rgb(240, 175, 50);
+
+$subTituloChico: calc(0.6em + 1vw);
+
+$subTituloMediano: calc(0.7em + 1vw);
+
+$subTituloGrande: calc(0.9em + 1vw);
+
+$parrafoChico: calc(0.5em + 1vw);
+
+$parrafoMediano: calc(0.6em + 1vw);
+
+$parrafoGrande: calc(0.3em + 0.9vw);
+
+$colorParrafo: rgb(255, 255, 255);
+
+$linkChico: calc(0.6em + 1vw);
+
+$linkMediano: calc(0.7em + 1vw);
+
+$linkGrande: calc(0.9em + 1vw);
+
+$bordesForm: 5px;
+
+$colorForm: rgb(233, 186, 99);
+
+$bordesBotones: 3px;
+
+$paddingBotones: 10px 15px;
+
+$paddingBotonesChicos: 5px 10px;
+
+@mixin grid ($display, $column, $rows) {
+    display: $display;
+    grid-template-columns: $column;
+    grid-template-rows: $rows;
+}
+
+@mixin marginTitle ($top, $bottom) {
+    margin-top: $top;
+    margin-bottom: $bottom;
+}
+
+@mixin form ($margin, $paddingL, $borderS) {
+    margin: $margin;
+    padding-left: $paddingL;
+    border-style: $borderS;
+}
+
+@mixin dimensionForm ($width, $line-height) {
+    width: $width;
+    line-height: $line-height;
+}
+
+@mixin ubicacion ($top, $left, $width) {
+    top: $top;
+    left: $left;
+    width: $width;
+}
+
+@mixin dimensiones ($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin subContent ($display, $justify, $align, $margin) {
+    display: $display;
+    justify-items: $justify;
+    align-items: $align;
+    margin: $margin;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: "cinzeldecorative";
+}
+
+a, p {
+   font-family: "cormorantInfant";
+}
